@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document for Print */
+
+h1, h2, h3, h4 {color:#000;}
+h1 {font-size:24px;}
+h2 {font-size:14px;}
+h3 {font-size:18px;}
+h4 {font-size:14px;}
+a:after{content:" (" attr(href) ") ";text-decoration:underline;}
+.button {background:none;border:none;}
+.button a {color:#000;}
+.middle-wrap a,
+.linkUnderline {color:#000;border-bottom:none;}
+.header-wrap,
+section {margin-bottom:15px;border-bottom:1px solid #666;padding-bottom:10px;}
+
+.colset-01 {clear:both;float:none;}
+.circle-01 {float:none;width:auto;height:10px;display:block;}
+.circle-01 .screenreader-hidden {position:static;left:0;top:auto;width:auto;height:auto;overflow:auto;}
+
+.colset-02 {clear:both;float:none;}
+.colset-02 li {float:none;display:block;}
+.colset-02 ul ul li {float:none;display:block;}
+.colset-02 #header-details i {color:#000;}
+.circle-02 #header-details .screenreader-hidden {position:static;left:0;top:auto;width:auto;height:auto;overflow:auto;}
+
+.videoEmbed,
+.toggles {display:none;}
+
+#steno-details img,
+#plover-details img,
+#hardware-details img {width:50%;max-width:50%;height:auto;}
+#contact-details {height:auto;}
+
+#users-details .colset-03 li, 
+#hardware-details .colset-03 li {float:left;width:30%;margin-right:5%;}
+
+#people-details .colset-04 li {float:left;width:23%;margin-right:2%;}

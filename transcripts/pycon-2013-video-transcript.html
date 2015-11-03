@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<title>Pycon 2014 Video Transcript - The Open Steno Project</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../js/functions.js"></script>
+</head>
+
+<body id="transcript">
+
+<div class="header-wrap clearfix">
+<header>
+<hgroup>
+<h1>The Open Steno Project</h1>
+<h2>An umbrella project for open source steno tools</h2>
+</hgroup>
+</header>
+</div>
+
+<p class="middle-wrap"><a href="http://openstenoproject.org/">The Open Steno Project Homepage</a></p>
+<p class="middle-wrap"><strong>Original video link:</strong><br/><a href="https://www.youtube.com/watch?v=Wpv-Qb-dB6g" class="linkUnderline">Mirabai&#8217;s Presentation at PyCon 2013</a></p>
+
+<h3>Full text video transcript<br/>(with video descriptions)</h3>
+
+<section>
+<p><em>(Video description: Opens with a title slide with blue background saying: "Pycon US 2013. Plover: Thought to Text at 240 wpm. Presented by Mirabai Knight." Below are logos of Python, Heroku, Google as Diamond Sponsors. Then video fades to Mirabai Knight standing on a stage behind a lectern in a black shirt and black pants.)</em></p>
+<p><strong>MIRABAI:</strong> Howdy.  So, first off, who am I?</p>
+<p><em>(Video description: A new slide appears titled "Who?" and lists 3 people involved in Plover: Mirabai Knight as founder, Joshua Lifton, PhD, as cofounder, Hesky Fisher as lead programmer. Below is a message saying: "Plus input, testing, and code from the 199 members of the Plover Google Group.")</em></p>
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> My name is Mirabai Knight, I'm based in New York City, and I'm a
+professional stenographer for Deaf and hard of hearing college students and professionals.  About six years ago, I got really frustrated with my proprietary steno software.</p>
+<p><em>(Video description: The video fades from the slide back to showing Mirabai standing on a stage.)</em></p>
+<p><strong>MIRABAI:</strong> It was, like, $4,000, you know, $700 bucks a year for upgrades, really buggy, bloated, terrible DRM. It was just driving me nuts, right?  So I decided there needed to be an open source alternative to steno -- professional, realtime, computer-connected stenography. So I figured no one else was going to write it, if I didn't do it myself.  I tried to find a Python tutor, and I was extremely lucky to happen upon Joshua Lifton, PhD, recently of the MIT Media Lab, who started out tutoring me in Python, and then got so wrapped up in
+the project that he basically came to me and said -- listen, I'll develop this for you.  You can pay me whatever you can afford, but I want to make this happen.  So he took over the project.  Has been coding it ever since, and then, when he had to sort of tone down the amount of time he could give to it, because of his full-time job, Hesky Fisher, whose day job is at Google, took over the project. So I've been just ridiculously fortunate to get these incredible top coders to help me with the project.  Also, we've got about 200 users who weigh in, bug testing, giving input.  It's been a really cool project.  It's been around for about three years now, and it's going strong.</p>
+
+<p><em>(Video description: The video fades from showing Mirabai on stage to a new slide titled "What is steno?" with 3 photos of an old Stenotype machine, a modern steno machine, and a QWERTY keyboard. It has words saying: "Phonetic-Mnemonic, 240 wpm with 99.9% accuracy")</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> What is stenography?  It's a phonetic-mnemonic text input system.  It's been around since about 1911, and to be a professional stenographer, like me, you basically need a speed of 240 words per minute, with 99.9% accuracy.  That means an error or omission about every thousand words or four pages.  You can see this old-fashioned steno machine obviously doesn't hook up to a computer.  That's from around 1930.  Cost about
+$50.  This much bigger sort of split, ergonomic steno machine, which is the one I use professionally, costs $4,000.  But this one down here, which just looks like a regular qwerty keyboard, except for some mysterious rectangular keys pasted onto it, costs about $50 for the keyboard and $20 for our laser cut steno keys, which we sell through the Plover store.  That is the main innovation of Plover, that we're basically cutting the hardware cost from $4,000 down to $50.</p>
+
+<p><em>(Video description: The video fades to a new slide titled "Why should you care?" and showing two pictures, one of a virtual person in a long robe and another one of a middle-aged female court reporter in a business suit sitting on a chair. There's a "!=" symbol between those pictures.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> But why should you care?  You're all developers.  I'm not.  I'm still trying to learn Python, but it's a hard slog. And when you think of stenographers, you probably think of, you know, old-fashioned ladies with buns in their hair, sitting in a courtroom, going, "La la la la la!"
+Why should you care?  It's not interesting, it's not cool, it's not useful.  But you're wrong.</p>
+
+<p><em>(Video description: The video fades to a new slide titled "What is steno good for?" with a bulleted list of words: speed, wearability, ergonomics, paying work, accessibility, fluency and efficiency of text entry - with the last bullet being bold.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> Steno is good for a ridiculous amount of things.  It's incredibly elegant, useful, efficient.  I won't really go into all the details of these six things here.  I wrote a series of essays detailing each one of them. Speed, wearability, ergonomics -- if you're interested in them, check out the link from my PyCon speakers page.  But I'll go briefly into paying work and accessibility for people with disabilities.  Mostly, I'll focus on the last one, which is fluency and efficiency of text entry, which is why you guys might care.</p>
+
+<p>So this speech will have sort of a two-pronged approach.  First I'm going to give you the hard sell to try to convince you that you, as a coder, should learn steno to write code, blog posts, emails, novels -- whatever you want to do with it.  That it's incredibly useful, and that you personally should learn it.  That might work for some of you.  Probably won't work for all of you.  So at the end of that section, I'll go on to sort of talking about why you might care about steno being out there in the world in general.  Even if you don't personally learn it, why it's really important that other people have the opportunity to use it.</p>
+
+<p><em>(Video description: The video fades to a new slide titled "Steno alphabet" with a picture of the alphabet.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> This is just the steno alphabet.  I'm not going to go into details, but my slides are up on the page, so you can check this out at your leisure later.</p>
+
+<p><em>(Video description: The video fades to a new slide titled "22 keys" with a picture of hands on a steno machine and a word below it saying "4,194,303 possible chords".)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> The steno keyboard has 22 keys.  Basically it's a two-dimensional syllabic input system, as opposed to the qwerty system, where obviously you take any word, break it down into its component letters, and then type out each letter one by one.  With steno, you input each syllable in a single stroke, though sometimes you can actually get more syllables per stroke, depending on the word.  So the left hand handles the initial consonants of the word, the right hand handles the final consonants, and the thumbs handle the vowels in the middle.</p>
+
+<p><em>(Video description: The video fades to a new slide titled "How does it work?" with a bulleted list of words: No spacebar, Two-dimensional syllabic chords, Most words can be written phonetically, Each stenographer's dictionary is unique. There's an image of a steno keyboard below the bulleted list showing an example of how the word "straps" is keyed.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> There's no spacebar.  Each stroke is submitted after all of the keys are released.  And most words can be written phonetically.  One example here is "straps".  You can look on the steno keyboard.  S-T-R-A-P-S.  You hit all of those together in one stroke, and it comes out "straps".  Very intuitive.</p>
+
+<p><em>(Video description: The video fades to a new slide titled "Flow diagram" and showing the steps as follows: Encode English to Steno, Input Chords, Find longest match in dictionary, Output definition.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em>  Now, Plover is unique -- as opposed to all the other proprietary steno software, in that it is essentially a keyboard emulator.  Most proprietary software is a word processor, and if you want to interact with the rest of the OS, it's in this very sort of awkward sandboxed system, with lots of delays and convoluted things.  It's very inconvenient.
+But Plover is stripped down and designed just to let you interact with your system, as if you were using a qwerty keyboard.</p>
+
+<p><em>(Video description: The video fades to a new slide titled "Multisyllabic words" showing how to type words "pie" and "python" with an image of steno strokes on left and of words on right.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em>  So, for an example, if you wanted to do a two-syllable word, you start out with PAOEU.  P, long I; PAOEU.  And you get the word "pie".  P-I-E. Then you add on THON, and suddenly Plover will delete the I and the E of "pie", and send out Y-T-H-O-N, to get python.  Very simple.</p>
+
+<p><em>(Video description: The video fades to a new slide showing how to type words "deplorable" and "peripheral".)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em>  As I mentioned, there are some words which you can write in a single stroke, even if they're ten letters and four syllables long, such as deplorable.  D-P-L-O-R-B-L, dplorbl.  Peripheral, P-R-I-F-R-L, prifrl.  I'm going to -- oh, yes, question?</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Could you go back to deplorable for a second?</p>
+
+<p><strong>MIRABAI:</strong> Go back to deplorable?</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Yes.</p>
+
+<p><strong>MIRABAI:</strong> Are you confused about why there's no D on the left side of the keyboard?  Yes, I guess I should have mentioned that, since the steno keyboard only has 22 keys, the letters that don't appear are produced by specific chords.  So in this case, TK is D, HR is L, and down here, EU is I.  You can see that in more detail if you look at the steno alphabet that I posted earlier.</p>
+
+<p><em>(Video description: The video fades to a new slide showing a piece of programming code and a table comparing the number of keystrokes - 143 on a QWERTY keyboard and 54 on a steno machine.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em>  So I'm going to show you an example of me inputting a very small snippet from Codecademy, which I'm trying to use to learn Python, with steno.  But just to keep in mind, while you're watching this, it took 143 keystrokes to do the same amount of code in qwerty, whereas it took 54 keystrokes to do it in steno.</p>
+
+<p><em>(Video description: The video fades to a screencast of Mirabai typing the piece of programming code with Plover.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the screencast)</em>  All right, let me rewind here.  Down below, you can see the phonetic equivalent of the steno that I'm writing.  Pretty simple.  (applause)</p>
+
+<p><em>(Video description: The video fades to a slide with a Vim logo and two columns, one with description about qwerty and another one with description about steno.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em>  All right, let me go back here.  Right.  Another big advantage of this two-dimensional versus one-dimensional text input system is that you can have mnemonic hooks for all of your words and commands.  So I'm a Vim user.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Woo!</p>
+
+<p><strong>MIRABAI:</strong> Yeah, Vim!  Woo!  And most of these sort of one-letter commands in Vim are sort of intuitive.  You know, back is go back one word.  That makes sense, right?  But r is used -- say if you want to record a macro, right?  R is used for replace a letter.  M is
+used for mark my spot.  So you have to have these weird, convoluted things like reQord maQro, with a q. It doesn't really work.  Because you only have one letter to sort of hang your mnemonic hook on.  Whereas, with steno, since you have an entire syllable per stroke, you can do really complex commands like GLERCH, for "launch browser and perform a Google search", or QUARN, short for "quarantine", which -- when I make an
+error in Python -- er, in Plover -- I can cut that highlighted text and append it to a document that I review later to help fix bugs in Plover's orthographic system.</p>
+
+<p><em>(Video description: The video fades to a slide titled "The altruistic argument" with a bulleted list: 35 million people with hearing loss in the US, less than 2% know sign language, less than 400 certified captioners, average captioner age is 50, 3 to 8 million people with speech disabilities.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em>  Now, I might have convinced some of you that steno is cool and useful and efficient and awesome and you want to learn it.  I might not have.  But I want to make the larger case that steno is really important to have in the world.  The altruistic argument.  In this country, there are 35 million people with hearing loss, and about 2% of those know Sign Language, so 98% can only really be helped by realtime captioning.  There's only 400 certified captioners like me in this country, and most of them are near retirement age.  Plus there are 3 to 8 million people who can't use their voices to speak, and steno is virtually the only technology that
+would allow them to converse with people they know in a truly realtime way, at true conversational speeds, as opposed to tapping things out in a pictographic system that's very slow and awkward.</p>
+
+<p><em>(Video description: The video fades to a slide titled "The proprietary model is broken" with a bulleted list: Virtually all steno schools are for profit; Startup costs include $1,000 student machine and $500 hobbled software, plus about $12,000 a year tuition; Nationwide dropout rate is 85%; Reaching 225 wpm can take 2-6 years.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> Unfortunately, the reason why there are so few stenographers and why so many of them are so old is because the only way to learn steno these days is through for-profit trade schools that are really kind of scams, you know? They'll let anybody in.  They'll cost a huge amount of money in tuition, plus buying the machine, buying the software, and the national dropout rate is 85%. Because, honestly, most of the people going to steno school don't have other prospects and aren't really well suited to learn the system.  Most people can reach about 140 to 160 words per minute in steno in, I would say, three to six months.  But getting that extra additional speed from 160 to 225, which is graduation speed, can take two to six years.</p>
+
+<p><em>(Video description: The video fades to a slide titled "No amateurs, no future" with a 2-column comparison table comparing an amateur and a professional. The amateur column has a picture of an young boy with a little guitar and the professional column has a picture of a large guitar with gold glitters. Details are described by Mirabai when voicing over the slide.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> The problem is that we currently don't have any amateurs or hobbyists or tinkerers, or anyone who wants to pick up steno for fun, for free, or at least low cost, considering this $50 system that we've got.  It's like if the only way you could learn guitar is if you had to go to music school and buy a jewel encrusted, professional-level guitar, that you had to go through a four-year program, before you could even use it.  If there's no amateurs, there's no future for the program.  And that's what's
+happening with steno.  It's disappearing.  People aren't using this technology, because they're locked into this proprietary system.</p>
+
+<p><em>(Video description: The video fades to a slide showing a screenshot of Hover Plover arcade game.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> That's why Plover now is totally free software, the hardware is really much more affordable than the $4,000 proprietary software (sic), and our next sort of endeavor is going to be trying to raise money for a video game system that will teach Plover in an addictive way, kind of retro-style arcade games.  Because gamification is a big buzzword in learning these days, but for steno, it's really, really perfect.  You start slow, you get faster, you start with simple words, you sort of build up your wordhoard, as you go along.  It's almost like an RPG plus a platformer, combined.  So we're hoping that, as the steno community grows, we'll be able to get more people in, to help develop this system of video games, and then the steno community hopefully will just explode.</p>
+
+<p><em>(Video description: The video fades to a slide titled "Plover Resources", an URL for Plover Wiki on http://ploversteno.org, and a bulleted list of the following items: Fly, Plover Aviary, Plover Blog, Plover Dojo, Steno 101, Steno Typer, Steno Hero Alpha. The Plover logo is on the right.)</em></p>
+
+<p><strong>MIRABAI:</strong> <em>(voicing over the slide)</em> There's a bunch of resources online.  If you go to ploversteno.org.  User groups, forums, mailing lists, all sorts of stuff.  And you can teach yourself steno on your own, try it out.  And I would also be happy to answer any questions at this point.  (applause) Oh, thank you.</p>
+
+<p><em>(Video description: The video fades to Mirabai standing on a stage.)</em></p>
+
+<p><strong>AUDIENCE MEMBER:</strong> More demos.</p>
+
+<p><strong>MIRABAI:</strong> More demos?  Okay.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Or questions.</p>
+
+<p><strong>MIRABAI:</strong> First I'll ask for questions.  If there are no more questions, I'll give you more demos.  No questions?</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Hi.  I switched to Colemak this year, which is just a different keyboard layout.  It's more... I don't know.  It's better.  Whatever you want to call it.  And I found that I accidentally locked myself out of everybody else's computers.  Because I
+can't type on other people's computers anymore.  Which kind of sucks.  I don't know.  The jury's still out.  I wonder if you experience this at all, with steno.  You sit down at a library computer.</p>
+
+<p><strong>MIRABAI:</strong> I mean, it is a disadvantage.  It's annoying having to switch back to qwerty.  We're currently
+looking at possible commercial solutions, for a low
+cost, very portable steno machine, that you can just
+plug into any computer, and it'll work as a qwerty
+keyboard.  Sort of emulate a qwerty keyboard, without
+having to install any software.  Which I think will
+help.  I mean, it's annoying having to carry a keyboard
+around, but that might be a sort of compromise
+solution.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Since Colemak is still the same shape
+as qwerty, it overrode qwerty in my brain.  It replaced
+it.  Does steno do that to you?</p>
+
+<p><strong>MIRABAI:</strong> No, I'm still pretty good with qwerty, yeah.
+It's just annoying.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Hi.  I'm an iPhone 5 user, and I
+always have a problem with the qwerty keyboard on it.
+Really hard to use, to send emails and so forth.  Do
+you think steno will be a good application for the
+iPhone 5, for regular users, for the faster typing?</p>
+
+<p><strong>MIRABAI:</strong> Well, because it's a two-handed system, it's
+not too easy to transfer.  I hope eventually there will
+be a wearable solution, where basically you have the
+keyboard, you know, on your pants, and you can just
+walk around.  I think this really sort of rises and
+falls depending on whether Google Glass takes off or
+sinks like a stone.  If people start having wearable
+options, and then get frustrated with the input methods
+available, I think steno could be a really good
+solution to that, but if wearable computing is really
+just relegated back to the '90s, who knows?  I don't
+think that it's going to be usable for the next few
+years, unfortunately.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Thank you very much.</p>
+
+<p><strong>MIRABAI:</strong> Sure.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> So as a Vim addict, I'm glad to hear
+that you are one too, because Dvorak was always a no-go
+for me, because the colon's in the wrong place, and the
+hj keys are a no-go.  So how do you handle that?  And
+also maybe you could address how you handle things like
+parens and square brackets.  Things of that nature.</p>
+
+<p><strong>MIRABAI:</strong> Well, let me put this back up again, because I
+use both parentheses and square brackets in this demo.
+Basically, for me, the sort of iconic Python double
+parentheses with nothing in them I just defined as
+PRENS.  I write it out at PRENS.  If I want an open
+parenthesis, I do PREN, and if I want a closed one, I
+do PRENT.  Brackets are BRKT and BR*KT.  It's actually
+fairly intuitive, once you get used to them.  And the
+nice thing about steno is that your fingers never stray
+from the home row, so you're not doing that sort of
+tippy-tappy thing with the qwerty or even the Dvorak
+keyboard.  You just stay there, and you make all the
+possible combinations that you can with the 22 keys
+underneath your fingers.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> So then moving around is also chording
+now, instead of using -- like, hjkl keys for moving
+around?</p>
+
+<p><strong>MIRABAI:</strong> Yeah, you do them sort of like this.  It's
+very simple.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Where does that configuration live?</p>
+
+<p><strong>MIRABAI:</strong> Say again?</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Where does that configuration live?
+Is that your vimrc, or is that the steno?</p>
+
+<p><strong>MIRABAI:</strong> Oh, no, no, I still just use regular Vim
+mappings.  Like, if I want to go back a word, I still
+write b.  I just write b on the steno keyboard, which
+is PW plus asterisk.  (laughter)</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> You said it takes two to six years to
+become a fully trained steno.</p>
+
+<p><strong>MIRABAI:</strong> To get really fast, yeah.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> How much time would it take to get
+faster than you are as a qwerty --</p>
+<p><strong>MIRABAI:</strong> My estimate is it's probably around two to
+three months, depending on how much time you put into
+it, and how quickly you pick it up, but not that much.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Thanks.</p>
+<p><strong>MIRABAI:</strong> Yeah, sure.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Probably about the same time as
+learning Dvorak, honestly.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Do you know anything about the state
+of the art for languages other than English?  So, for
+example, I am from Russia, so I would have to type
+Cyrillics if I were to use this thing.</p>
+<p><strong>MIRABAI:</strong> Yes, this is about foreign languages in steno.
+We actually do have a number of people on the Plover
+user group from other countries.  There's one from
+Poland.  I think there's a Russian-American who is
+interested in using steno in Russian.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Polish uses the Latin alphabet.</p>
+<p><strong>MIRABAI:</strong> Yeah, no, I know.  But basically, Plover can
+output anything in the Unicode character set.  And I
+think there are stenographic theories for other
+languages.  Some of them you might have to start from
+scratch, but I think for most European languages, there
+already is an established stenographic theory that you
+would just have to import into the Plover system.  So
+there's a lot of potential there.  Not many people are
+using it at this point.</p>
+<p><strong>AUDIENCE MEMBER:</strong> I'm just curious whether you would
+have enough keys, because Russian has 33 letters rather
+than 26.</p>
+<p><strong>MIRABAI:</strong> Quite possibly.  Since it's phonetic.  I
+believe there is a pre-existing Russian stenographic
+system, but I'm not completely positive.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, thanks.</p>
+<p><strong>MIRABAI:</strong> Sure.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Hi.  I was just wondering -- so it
+looked in the picture like the $50 keyboard that you
+were talking about -- it looks like a normal keyboard.</p>
+<p><strong>MIRABAI:</strong> Not quite.</p>
+<p><strong>AUDIENCE MEMBER:</strong> So are there hardware differences?</p>
+<p><strong>MIRABAI:</strong> There are, yeah.  The main thing is that it
+needs to have n-key rollover.  Because most keyboards
+won't accept chords of more than, like, two keys at a
+time.  So the one we use -- the cheapest n-key rollover
+keyboard is the Microsoft Sidewinder X4, which is like
+a gaming keyboard.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Sorry, follow up.  So is it possible
+to get, like, other keyboards other than that $50 one,
+or are they all more expensive than that?</p>
+<p><strong>MIRABAI:</strong> They're all more expensive than that.  Yeah,
+like the Majestouch costs about $120.  Works great.
+But nothing cheaper than $50, unfortunately.</p>
+<p><strong>AUDIENCE MEMBER:</strong> How did you come up with the name?</p>
+<p><strong>MIRABAI:</strong> Oh, yes.  Actually, let me show you the logo.
+If you can see this little guy -- a plover is a sort of
+a wading bird.  I came up with it for two reasons.
+First of all, it's a two syllable, six letter word that
+you can play in one stroke on the steno keyboard, and
+secondly, I like that it's a phonetic system, but
+Plover is a non-phonetic word.  Sort of perverse that
+way.  But you can see on his little wing there -- the
+dark brown patches spell out Plover.  Because his
+little wing is a steno keyboard.  So P-L-O-F-R spells
+out Plover.  (applause)</p>
+<p><strong>AUDIENCE MEMBER:</strong> You mentioned just a few moments ago
+that you type bracket and paren by typing combinations
+of...  Like, that sound like bracket and paren.  What
+do you do when you actually want to type the word
+bracket?</p>
+<p><strong>MIRABAI:</strong> Oh, well, that's yet another definition.
+Basically, for the actual character bracket, I take out
+the vowel.  So it's sort of BRKT and BR*KT, but for the
+word "bracket", I just write BRAKT, which is one
+stroke, again.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Like everything.</p>
+<p><strong>MIRABAI:</strong> Yeah!</p>
+<p><strong>AUDIENCE MEMBER:</strong> So this is really cool.  My question
+is: You mentioned that you have, like, a personal
+dictionary.</p>
+<p><strong>MIRABAI:</strong> Yes.</p>
+<p><strong>AUDIENCE MEMBER:</strong> How is that formed?  And sort of
+what's the interface for that?</p>
+<p><strong>MIRABAI:</strong> Sure.</p>
+<p><strong>AUDIENCE MEMBER:</strong> And I guess the other question is...
+Let's assume that this comes to dominate, like, the
+hacker world.</p>
+<p><strong>MIRABAI:</strong> I hope so!  That's what I'm going for!</p>
+<p><strong>AUDIENCE MEMBER:</strong> How would we do interoperability if we
+all have personal dictionaries, basically, to use with
+this?</p>
+<p><strong>MIRABAI:</strong> Yeah, well, I mean, that goes back to the
+question of what you have to do when you're using
+someone else's computer.  But the dictionary is
+inherent.  Each stenographer has their own dictionary.
+And I was going to record a demo of using the steno
+keyboard to define a new word, but it was a little bit
+clumsy.  It's actually working pretty well now.  It's
+one of our new features.  It's really useful.  But
+yeah, you would have to have some way of transporting
+your dictionary.  But it's, like, a 4-meg text file.
+It's not that hard to -- you can use a thumb drive, or
+if we do get this $200 solution of just a plug-in
+keyboard that works with any computer, the dictionary
+will be on there.</p>
+<p><strong>AUDIENCE MEMBER:</strong> And to define those words, you, I
+assume, do another chord That says, "I'm going to
+define a new word and here it is?"</p>
+<p><strong>MIRABAI:</strong> Correct, yep.  Yeah, it's actually pretty
+seamless.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Cool!</p>
+<p><strong>AUDIENCE MEMBER:</strong> Hi, I used to work at a court
+reporting firm, actually, so this all sounds too
+familiar.  And reading the description, this will be
+great for a realtime court reporting application.  Do
+you have plans for expanding this in the future, in a
+commercial way?</p>
+<p><strong>MIRABAI:</strong> No.  I want Plover to remain open source.
+Honestly, I'm not really interested in breaking into
+the court reporting market, because I don't do court
+reporting, and I find that stuff incredibly tedious.
+So the $4,000 proprietary software already handles the
+court reporting.  But I do, you know, realtime
+stenography for the Deaf and hard of hearing.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Cool, thank you.</p>
+<p><strong>AUDIENCE MEMBER:</strong> At 240 words per minute, you'd think
+you would be a great candidate for the MUD gaming
+community.  Have you talked to these people yet?</p>
+<p><strong>MIRABAI:</strong> No, actually.  That's a really good idea.
+Yeah, I'd love for there to be, like, a text-based RPG
+that teaches you steno.  I think that would be a really
+good application, and a lot cheaper to develop than a
+big graphics extravaganza.  Yeah, right now the typing
+game community are pretty excited about Plover.  But
+that's a pretty small niche in the total online gaming
+world. So we'll see what happens.  Demos?  All right. I
+got a whole playlist here.</p>
+<p><strong>AUDIENCE MEMBER:</strong> You went too fast!</p>
+<p><strong>MIRABAI:</strong> Sorry about that.  (humming)</p>
+<p><strong>MIRABAI:</strong> See, I gave the exact same presentation in New
+York City, and I didn't have enough time.  I think I
+must have just gone on adrenaline this time.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Sorry, may I ask another quick
+question?</p>
+<p><strong>MIRABAI:</strong> Sure!</p>
+<p><strong>AUDIENCE MEMBER:</strong> So how does it work with the thumbs?
+So the vowels are on the thumbs, and you have to press
+either one or two keys at the same time with your
+thumb, right?</p>
+<p><strong>MIRABAI:</strong> Exactly, yes.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, cool.</p>
+<p><strong>MIRABAI:</strong> Yep, that's exactly right.</p>
+<p><strong>AUDIENCE MEMBER:</strong> It's convenient to press two keys at
+once?</p>
+<p><strong>MIRABAI:</strong> It is, yeah.  I mean, the steno keyboard is
+designed that way.  Basically the footprint of the
+steno keyboard is very small.  It's basically the size
+of a typical hand, you know.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, that makes sense, yeah.</p>
+<p><strong>MIRABAI:</strong> So here is a short demo of me using the Filco
+Majestouch that I mentioned earlier, which is about a
+$120 qwerty keyboard, to write in Plover, with the
+corresponding keys that I'm pressing.  I'm not sure how
+visible that is.  Eh, I should have made it bigger.
+Let me give you another one.  Here is the online typing
+game that I mentioned.  It's called Typeracer.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Are you the world record holder?</p>
+<p><strong>MIRABAI:</strong> I'm not, actually.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Who is?</p>
+<p><strong>MIRABAI:</strong> I get too nervous.  Well, the guy who's the
+world record holder on Typeracer is a qwerty typist.</p>
+<p><strong>AUDIENCE MEMBER:</strong> What?</p>
+<p><strong>MIRABAI:</strong> I know.  It's ridiculous, right?  Honestly, I
+get too nervous, and I get sort of hung up on it.  I'm
+pretty close.  I think I beat him in several races.
+But he's just really focused.  (laughter) But I
+certainly beat Jumbo here.  Jimbo.  Whoever it was.
+(laughter) And here's another application that I can't
+really give you the benefit of the voice, particularly.
+ESPEAK VOICE: This is a demonstration of how Plover can
+be used to speak at a normal conversational pace.  You
+can see that I'm triggering the speech engine manually,
+but while the computer is speaking the previous
+sentence, I'm able to write out the next one, resulting
+in a smooth and even flow of speech.  This
+demonstration uses eSpeak, which is a free program
+included with Linux, but Plover works with all realtime
+text-to-speech engines, and can be used to do virtually
+anything the qwerty keyboard can do.  Why is it so much
+faster and more efficient than qwerty?  For a steno
+machine, an entire syllable, word, or phrase...</p>
+<p><strong>MIRABAI:</strong> Anyway, that's a small example of how people
+can use...  (applause) How people can use Plover to
+speak if they can't speak with their voices, whether
+due to surgery, or whether they have congenital
+malformations, or whatever, which is a surprising
+number of people.  And it's very difficult for them to
+converse at a conversational pace without a realtime
+system like this.  Another question?</p>
+<p><strong>AUDIENCE MEMBER:</strong> How big is the dictionary you use?
+<p><strong>MIRABAI:</strong> My dictionary is currently about 160,000
+words, though there are dictionaries that are 200,000,
+you know.  It's a good starter dictionary.  I use my
+own dictionary as the sort of Plover default
+dictionary, which people can then download and alter
+and add to at their heart's delight.</p>
+<p><strong>AUDIENCE MEMBER:</strong> I was wondering, if it's not too deep
+of a hole to fall into, how...  How do I ask this?  Is
+it emulating an input source, essentially?  So as far
+as your computer is concerned, these are the letters
+that you typed?</p>
+<p><strong>MIRABAI:</strong> Yes, absolutely.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, and then it's designed to have
+different types of output for different systems that
+expect things?</p>
+<p><strong>MIRABAI:</strong> No, it's just a qwerty keyboard emulator.  It
+sends out -- you write the letter in one stroke, but
+then it's the one that does the work of converting
+those into individual letters, and then in the example
+that I showed, where I wrote PAOEU, and it said pie,
+and then I wrote THON, it deleted "ie", and then sent
+out "thon".  So it is basically using delete tokens and
+send tokens.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, so it is actually piping out a
+couple of backspaces, and then...</p>
+<p><strong>MIRABAI:</strong> Exactly, yeah, so it's really transferable to
+just about every program.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Cool.</p>
+<p><strong>MIRABAI:</strong> Yeah.</p>
+<p><strong>AUDIENCE MEMBER:</strong> How would you compare qwerty to steno
+for hand strain?  Because it looks so elegant and just,
+like, gentle.</p>
+<p><strong>MIRABAI:</strong> Yes, absolutely.  It's something I didn't go
+into too much, but the ergonomic argument is a really
+powerful one.  I started out as a qwerty
+transcriptionist, and I could type around 110 words per
+minute, but after doing that for eight hours a day, my
+wrists and my hands were just killing me.  And I was
+worried -- at the time, I was in steno school, and I
+was worried that I would just jeopardize my entire
+career by, you know, burning out my hands.  And as soon
+as I switched to steno, it was miraculous.  I mean, I
+do use the split ergonomic steno keyboard, but it's
+much more like playing the piano than playing a
+typewriter.  You're stroking, and then you can relax,
+and then you stroke, and then you can relax.  So you're
+not constantly moving your fingers without any
+cessation, and you're not keeping that tension in your
+fingers.  So I can type, you know, at around 200 words
+per minute for eight hours without a break, and I don't
+feel any pain at all.</p>
+<p><strong>AUDIENCE MEMBER:</strong> I was just curious if there were any
+special cases where it breaks, like words like there,
+their, and they're, or anagrams, or, like --</p>
+<p><strong>MIRABAI:</strong> Yeah, homonyms are handled really well.  I
+mean, you have to sort of either make up or learn the
+specific rules of differentiating them.  But yeah, I
+don't have any issues with homonyms, particularly.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Awesome, thank you.</p>
+<p><strong>MIRABAI:</strong> Sure.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Hey, I just thought of another one.
+So you know, when you learn a totally new skill,
+there's sort of a point, a ramp-up period, where you
+have to devote yourself and be disciplined to learn the
+skill, and there's a point, like, where you're hooked.
+And from that point on, it's all coasting.  It's like
+-- okay, you want to learn more of the language.  You
+want to learn more of the vocabulary.  So if you were
+speaking to a person who's, like, grown up on qwerty,
+like, what does it take to get to the -- okay, now
+you're obsessed.  Like, you've got to learn how to do
+this -- point?</p>
+<p><strong>MIRABAI:</strong> Yeah, that's a really good question.  And it
+is quite variable.  There is a fairly steep initial
+learning curve.  You can type really simple phonetic
+words like cat and straps once you learn the chording
+keyboard, but there's a certain point where the
+frustration sets in, and you're writing words that you
+think are phonetic, and they don't necessarily
+translate the way you want them to.  We're definitely
+working to make that much easier.  You know, having
+sort of a prompting system, that if you type out a word
+letter by letter, it'll show you the equivalent steno
+chord for it.  Or, you know, the video game, I think,
+will really help people to sort of just put in
+concentrated sort of flow-state work into it, and then
+suddenly wake up and be like -- I've been doing this
+for two hours, and now I can actually write this email
+without ever getting frustrated or having to stop or
+having to look up a word specifically.  So right now,
+Plover is not particularly user friendly, but I think
+it will become more so.</p>
+<p><strong>AUDIENCE MEMBER:</strong> How do keys such as control, alt,
+meta, and shift work?</p>
+<p><strong>MIRABAI:</strong> Again, they're just defined in the dictionary.
+We have a special command syntax, so alt is... ALT.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Sweet.</p>
+<p><strong>MIRABAI:</strong> Yeah.</p>
+<p><strong>AUDIENCE MEMBER:</strong> How you do combine, say, control and
+shift?  Is that, again... Alt-shift?</p>
+<p><strong>MIRABAI:</strong> Well, I don't believe that right now we're
+able to have a sort of "hold down shift while I write
+the next word", but you can sort of nest the commands
+in a single dictionary definition.  So for me, alt-tab
+is TABLT.  So that'll just do alt-tab.  But I think
+eventually, we do want to implement sort of a stickykey
+situation, where if you write one, you'll know that the
+next one that's written will be combined with the
+previous.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Thank you.</p>
+<p><strong>MIRABAI:</strong> Sure.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, I saw your demo, where there was
+stenographic input, and the output was valid Python
+chords or functions, and so on.  I didn't understand
+how that works.  Because -- are you using pre-canned
+special things that you trigger, or are you really
+freely programming with brackets and braces and curly
+things and all the punctuation?</p>
+<p><strong>MIRABAI:</strong> Well, one thing that's really great about
+Python, as you guys know, is that it's very readable.
+It doesn't use that much specific syntax or punctuation
+that isn't common in English speech.  So, you know, you
+can see a lot of these things are just simple English
+words.  Original is ORJ.  You know, lower is LOER.
+WORD, FIRST, PRINT, FIRST.  All of these commands --
+you know, I did define raw input as RIPT, which was
+raw_input(" so that's a single stroke for that specific
+Python command, but that's something that you'll use
+all the time, so it's worth defining it once, and then
+being able to do it in a single stroke.  Similarly for
+variables, if you come up with a specific variable that
+you know you're going to be writing in your program
+many times over, you can just take a second, define it
+as a one stroke, mnemonic syllable, and then every time
+you reference that variable in the future, you just
+have to do that one stroke to get it.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay.  I was just wondering whether I
+can write a new program, which is not yet defined, and
+I have certain identifiers which are new, and all of
+that.</p>
+<p><strong>MIRABAI:</strong> Oh, absolutely, yes.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, I'll try it.  Thank you.
+<p><strong>MIRABAI:</strong> Yes, it's pretty simple.  Anything -- you
+know, again, basically you can output anything that the
+qwerty keyboard can.  So you just have to know what
+strokes correspond to which letters or punctuation or
+whatever you're using.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Do you have any issues with screen?</p>
+<p><strong>MIRABAI:</strong> I'm sorry?</p>
+<p><strong>AUDIENCE MEMBER:</strong> Screen?  Control-A,
+control-left-right, screen?  You know, for -- you SSH
+something, and then you start screen, and then you have
+multiple screen sessions on it.</p>
+<p><strong>MIRABAI:</strong> That hasn't really come up.  I imagine it
+would be handled similarly to the way one handles it
+using just a qwerty keyboard.</p>
+<p><strong>AUDIENCE MEMBER:</strong> But there's a lot of metakey
+combinations that one uses with screen.  Like, in
+parallel, where you're doing control-A and something
+else all at the same time on qwerty.</p>
+<p><strong>MIRABAI:</strong> You can nest those in any dictionary
+definition.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, so you would do, like, two
+different chords, then?</p>
+<p><strong>MIRABAI:</strong> Well, I sort of like to see it at a higher
+level, where if there's a particular command, you would
+just assign sort of a mnemonic hook to that command,
+and then assign that to whatever metakey combinations
+are necessary to produce it.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Cool, thank you.</p>
+<p><strong>MIRABAI:</strong> Sure.</p>
+<p><strong>AUDIENCE MEMBER:</strong> I think I know the answer to this
+question, but there's no way to get this to work on a
+laptop right now?</p>
+<p><strong>MIRABAI:</strong> Unfortunately, no.  There are no n-key
+rollover laptops.  It's really frustrating, because I
+would pay any amount to get one, but currently, no.
+Yeah.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Hi.  Are you familiar with
+transcriptionist work?</p>
+<p><strong>MIRABAI:</strong> Yes, I was a transcriptionist for many years.</p>
+<p><strong>AUDIENCE MEMBER:</strong> Okay, so how does this compare to,
+like, their crazy macro systems?</p>
+
+<p><strong>MIRABAI:</strong> It's much better.  Much more efficient.  Yeah,
+with transcriptionists, mostly they use, like, text
+expansion systems, where they have to write the first
+two or three letters of a word, and then it'll sort of
+expand out, but with steno, most of those you can do in
+one stroke, so it's still almost triple the efficiency.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Wow, thanks.</p>
+
+<p><strong>MIRABAI:</strong> Sure.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> So thank you for captioning the Ada
+Initiative's latest video.</p>
+
+<p><strong>MIRABAI:</strong> Absolutely!</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> I didn't realize how lucky we were to
+get one of the 400.  But I just imagine that when you
+have a very -- you can hear code in your head, when
+you're writing these things.  I was wondering if you
+could record a video of you speaking your code, or
+maybe speak it right now.</p>
+
+<p><strong>MIRABAI:</strong> Sure!  So let me start with this one here.
+All right, this is a sdration of how Plover can be ufed
+to speak at a nol kfrbl pace.  You can see tha I'm
+trirging the speech engine manwael, but while the kpurt
+is spaoeg the praoef snens, I'm able to write out the
+negt one, rulting in a smooth and aoen flow of speech.
+This sdraition uses espeak...</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Can you do it for code?  Your code
+one?</p>
+
+<p><strong>MIRABAI:</strong> Oh my code one, sure, yeah, absolutely.  Yeah,
+you can see it's captioned down at the bottom.  Orj
+kwals ript kpa ent ai word kln prent rr f orj pp s afl
+prens kln rr tab word kwals orj pp loer prens rr tab
+firs kwals word brkt 0 br*kt rr tab print firs rr else
+kln rr tab print kwgs kpa not ai word tppl kwgs
+(applause) Yeah, that is literally what's going on in
+my head as I'm writing steno.  So there you go.</p>
+
+<p><strong>MIRABAI:</strong> No more questions?  All right, then I guess I
+will -- oh, is there one?  Yeah, okay.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> So I was just pulling up your website,
+and seeing that these are sort of acrylic pieces that I
+glue on my keyboard, basically.</p>
+
+<p><strong>MIRABAI:</strong> Yeah, laser cut acrylic.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> Do you see any prospects for maybe a
+little more sophisticated hardware improving things?</p>
+
+<p><strong>MIRABAI:</strong> Absolutely!</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> I mean, a lot of people are now
+getting hobbyist 3D printers.  Do you imagine people
+printing out their own steno keyboards or something?</p>
+
+<p><strong>MIRABAI:</strong> I was actually talking about a possibility of
+a Raspberry Pi-based sort of steno kit, that we could
+sell for people to assemble, and as I said, we are also
+thinking about a commercial venture of just selling
+sort of low cost, pre-made steno machines.  So yeah,
+there's a lot of potential in that.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> From Adafruit!</p>
+
+<p><strong>MIRABAI:</strong> From Adafruit?  Maybe!  We'll see what
+happens.</p>
+
+<p><strong>AUDIENCE MEMBER:</strong> So is it just 22 switches, basically,
+that you would need for one of these?</p>
+
+<p><strong>MIRABAI:</strong> Exactly, yeah.  Absolutely.  It's very simple.
+All right, so I guess that's it.  Thank you!</p>
+
+<p><em>(Video description: The video fades to a slide with Next Day Video logo, an URL for www.nextdavideo.com, and a tagline "record today, watch online tomorrow".)</em></p>
+
+</section>
+
+<footer>
+<p>&copy; 2014 <a href="http://openstenoproject.org/" class="linkUnderline">Open Steno Project</a>. All rights reserved. Designed by <a href="http://svknyc.com" class="linkUnderline">Svetlana Kouznetsova</a>.</p>
+</footer>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10044279-1");
+pageTracker._setDomainName(".stenoknight.com");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+</body>
+</html>
