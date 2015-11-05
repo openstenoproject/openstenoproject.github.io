@@ -13,9 +13,9 @@ $(document).ready(function(){
   		$(this).css("background","#C89D39");
 	});
 	$("#header-details .fa-stack").hover(function(){
-  		$(this).css("color","#876925");
-  	},function(){
   		$(this).css("color","#C89D39");
+  	},function(){
+  		$(this).css("color","#FFF");
 	});
 	$("header a.linkUnderline").hover(function(){
   		$(this).css("border-bottom","0");
