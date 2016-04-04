@@ -86,13 +86,22 @@ section .endSection {margin-bottom:1.5em;}
 .colset-01 {margin:0 auto;text-align:center;margin-bottom:1em;}
 .colset-01 ul {list-style-type:none; margin:0;padding:0;margin:0 auto;text-align:center;}
 .circle-01 {
-  float:left;width:80px;width:80px;width:8rem;height:120px;height:12rem;margin-right:5%;text-align:center;background-color: white;
+  display: inline-block;
+  width:80px;
+  width:8rem;
+  height:120px;
+  height:12rem;
+  margin-right:10px;
+  text-align:center;background-color: white;
   -webkit-border-bottom-right-radius: 40px;
   -webkit-border-bottom-left-radius: 40px;
   -moz-border-radius-bottomright: 40px;
   -moz-border-radius-bottomleft: 40px;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
+}
+.circle-01:hover {
+  background-color: #e2e2e2;
 }
 .circle-01 .image-wrapper {
   height: 70px;
@@ -129,6 +138,10 @@ div.circle-tag {
 .colset-02 ul {list-style-type:none; margin:0 auto;padding:0;}
 .colset-02 ul ul {text-align:center;}
 .colset-02 ul ul li {float:none;width:100%;}
+
+#header-title {margin-left:15px;}
+#header-title h1 {font-size:3.5rem;}
+#header-title h2 {font-size:2rem;}
 
 #header-details {color:#fff;text-align:left;margin:1em 0 1.5em 0;}
 #header-details .fa-stack {color:#fff;}
@@ -191,7 +204,7 @@ div.circle-tag {
 /* max width of 600 pixels. */
 @media screen and (max-width:599px) {
 	body {font-size:16px;font-size:1.6rem;}
-	.colset-01 {width:260px;margin:0 auto;}
+	.colset-01 {width:100%;margin:0 auto;}
 	.circle-01 {height:80px;height:8rem;margin-right:10px;}
 	.circle-01.last {margin-right:0;}
 	h1 {font-size:30px;font-size:3rem;margin:.5em 0 0 0;}
@@ -220,7 +233,7 @@ div.circle-tag {
 /* Minimum width of 600 pixels. */
 @media screen and (min-width:600px) {
 	body {font-size:18px;font-size:1.8rem;}
-	.colset-01 {width:50%;}
+	.colset-01 {width:100%;}
 	.circle-01.last {margin-right:0;}
 	h1 {font-size:40px;font-size:4rem;margin:1rem 0 0 0;margin:10px 0 0 0;}
 	h2 {font-size:25px;font-size:2.5rem;margin-bottom:10px;margin-bottom:1rem;}
@@ -239,7 +252,7 @@ div.circle-tag {
 }
 
 @media screen and (min-width:720px) and (max-width:959px) {
-	.colset-01 {width:50%;}
+	.colset-01 {width: 100%;margin: auto;}
 	.circle-01 {height:80px;height:8rem;}
 	header, section {width:720px;}
 	.colset-02 {width:720px;}
@@ -259,7 +272,7 @@ div.circle-tag {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width:960px) {
 	header, section {width:960px;}
-	.colset-01 {float:left;width:30%;}
+	.colset-01 {float:left;width:40%;}
 	hgroup {float:left;text-align:left;}
 	.colset-02 {width:940px;}
 	.colset-02 li {float:left;width:50%;}
