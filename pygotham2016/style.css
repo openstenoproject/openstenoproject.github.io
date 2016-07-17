@@ -1,0 +1,34 @@
+body {
+ margin: 0;
+ padding: 0;
+}
+
+iframe {
+ border: 0;
+ width: 100%;
+}
+
+.master {
+ position: relative;
+ height: 100%;
+ width: 100%;
+}
+
+.aloft {
+ top: 0;
+ height: 160px;
+}
+
+.contain-main {
+ position: absolute;
+ top: 160px;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+}
+
+.main {
+ width: 100%;
+ height: 100%;
+}
+
