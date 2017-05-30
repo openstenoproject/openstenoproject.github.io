@@ -1,0 +1,224 @@
+html {
+	background: #1e1e1e;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+body {
+	font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+}
+
+a {
+	color: #00a4ca;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	width: 100%;
+}
+
+h1 strong, h2 strong {
+	font-weight: 700;
+	font-family: $patua;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+}
+
+@media(max-width: 200px) {
+	h3 {
+		font-size: 90%;
+	}
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 2.1em;
+	margin: 0;
+	font-family: $patua;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 2.2em;
+	margin: 0 0 20px 0;
+	font-family: $patua;
+}
+
+h3 {  font-family: $patua;
+	margin: 20px 0 10px 0;
+	font-family: $patua;
+}
+
+li {
+	padding: 0.3rem;
+}
+
+th, td {
+ 	padding: 0.3rem;
+}
+
+p, address, ul {
+	font-size: 1.05em;
+	margin-bottom: 20px;
+	font-weight: 400;
+  color: #3e3e3e;
+	line-height: 1.4em;
+	strong, a {
+		font-weight: bold;
+	}
+}
+
+.home {
+	p, address {
+	  font-weight: 300;
+	  color: #555;
+	  strong, a {
+			font-weight: 400;
+		}
+	}
+}
+
+.stenoboard {
+	margin: auto;
+	max-width: 600px;
+	$key-width: 95%/11;
+	$key-padding: 10%;
+  $height: 120%;
+	.steno-key {
+		transition: all .1s ease-in-out;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 3%;
+		background-color: rgba(255, 255, 255, 0.5);
+		&.active {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+	  height: 0;
+	  margin: 0;
+	  padding-bottom: $height;
+	  & + .steno-key {
+	    margin-top: $key-padding;
+	  }
+	}
+	#S-, #asterisk {
+		height: 0;
+		padding-top: 2px; // Accounts for the border when there are two keys.
+	  padding-bottom: $height*2 + $key-padding;
+	}
+	#S-, #K-, #W-, #R-, #asterisk, #-R, #-B, #-G, #-S, #-Z, #A, #O, #E, #U {
+		border-radius: 0 0 40px 40px;
+	}
+	.steno-column {
+		display: inline-block;
+		// Again, accounting for the border width.
+		margin-left: -1px;
+		margin-right: -1px;
+		width: $key-width;
+	}
+	.thumb-cluster {
+		transform: translate(-$key-width*.525);
+		.spacer {
+			display: inline-block;
+			width: $key-width*.5;
+		}
+	}
+}
+
+
+$translate_offset: (-100%/11)*0.4;
+#stenoer {
+	div[data-typer-child]:first-child {
+		// Hide empty div.
+		display: none;
+	}
+	div[data-typer-child] {
+	  display: inline;
+	}
+	line-height: 40px;
+	padding-top: 20px;
+	@media(max-width: 600px) {
+		line-height: initial;
+		font-size: 1.5rem;
+	}
+	&:before {
+		display: inline;
+		content: "|";
+		height: 1em;
+		visibility: hidden;
+	}
+	display: inline-block;
+}
+
+#replayButton {
+	padding: 5px;
+	// Account for top being cut off.
+	color: white;
+	transition: all 0.25s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	display: inline-block;
+	&:hover {
+		color: rgba(255, 255, 255, 0.7);
+	}
+	span.fa {
+		display: inline-block;
+		height: 0;
+		font-size: 1.3em;
+	}
+	.done + & {
+		visibility: visible;
+		opacity: 1;
+		@media(max-width: 600px) {
+			span.fa {
+			  font-size: 5vw;
+			}
+		}
+	}
+}
+
+.center {
+	text-align: center;
+}
+.button {
+	background-color: white;
+	border: 1px solid $brand-color;
+	border-radius: 4px;
+	margin: 20px auto;
+	color: $secondary-brand-color;
+	padding: 15px 28px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	&:hover {
+		background-color: #eee;
+		text-decoration: none;
+	}
+	& + .button {
+		margin-left: 20px;
+	}
+}
+
+.key_face {
+	text-align: center;
+	& img {
+		text-align: center;
+		margin: 0 auto;
+		width: auto;
+	}
+}
+
+#qwerty_chart img {
+	max-height: 300px;
+	height: auto;
+	width: auto;
+}

@@ -1,0 +1,8 @@
+
+{% for item in include.section %}
+
+<h3>{{ item.title }}</h3>
+{{ item.description | markdownify }}
+
+{% endfor %}
+

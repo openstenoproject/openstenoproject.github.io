@@ -1,361 +1,122 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-<title>The Open Steno Project</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/print.css" media="print">
-<link rel="stylesheet" href="css/webfonts.css">
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/functions.js"></script>
-</head>
+---
+title: Home
+description: Bringing stenography to everyone. The Open Steno Project seeks to bring free software, low-cost hardware, and interactive learning tools to everyone who wants to use steno for their personal or professional pursuits.
+---
 
-<body>
+<section class="hero">
+	<div class="text-container">
+		<div class="stenoboard">
+			{% include steno-layout.html %}
+		</div>
+		<h2 id="stenoer" class="editable">
+	    <noscript>
+	      Bringing stenography to everyone.
+	    </noscript>
+	  </h2>
+	  <a href="#" id="replayButton" title="Replay animation">
+	  	<span class="fa fa-refresh"></span>
+	  </a>
 
-<div class="header-wrap clearfix">
-<header>
-<ul class="colset-01 clearfix">
-<li class="circle-01">
-  <a href="http://www.openstenoproject.org/plover/" title="Go to Plover's Homepage">
-    <div class="image-wrapper">
-      <img src="images/icon-plover-2x.png" alt="The Plover bird"></img>
-    </div>
-    <div class="circle-tag">Plover</div>
-  </a>
-</li>
-<li class="circle-01">
-  <a href="#hardware" title="Go to Hardware" id="hardware-icon">
-    <div class="image-wrapper">
-      <img src="images/icon-hardware-2x.png" alt="Hardware for Plover"></img>
-    </div>
-    <div class="circle-tag">Hardware</div>
-  </a>
-</li>
-<li class="circle-01">
-  <a href="https://github.com/openstenoproject/" title="Go to The Open Steno Project Github website">
-    <div class="image-wrapper">
-      <img src="images/icon-develop-2x.png" alt="Develop for Open Steno"></img>
-    </div>
-    <div class="circle-tag">Develop</div>
-  </a>
-</li>
-<li class="circle-01 last">
-  <a href="https://discord.gg/0lQde43a6dGmAMp2" title="Join the Plover Discord Chat Room">
-    <div class="image-wrapper">
-      <img src="images/icon-discord-2x.png" alt="Discord Logo"></img>
-    </div>
-    <div class="circle-tag">Discuss</div>
-  </a>
-</li>
-</ul>
-<hgroup id="header-title">
-<h1>The Open Steno Project</h1>
-<h2>An umbrella project for open source steno tools</h2>
-</hgroup>
-<div class="screenreader-hidden clearfix" style="clear:both;">
-<nav>
-<ul>
-<li><a href="#header-details">Continue with header details</a></li>
-<li><a href="#steno-details">Go to "What is Stenography?" section</a></li>
-<li><a href="#plover-details">Go to "What is the Open Steno Project?" section</a></li>
-<li><a href="#users-details">Go to "Who Can Use Plover?" section</a></li>
-<li><a href="#start-details">Go to "Get Started" section</a></li>
-<li><a href="#hardware-details">Go to "Hardware" section</a></li>
-<li><a href="#people-details">Go to "People Behind Plover" section</a></li>
-<li><a href="#resources-details">Go to "Resources" section</a></li>
-<li><a href="#contact-details">Go to "Contact" section</a></li>
-</ul>
-</nav>
-</div>
-<div class="colset-02 clearfix">
-<ul id="header-details">
-<li>
-<ul>
-<li>
-<a href="https://www.facebook.com/pages/Stenosaurus/398979676868998" title="Stenosaurus Facebook">
-<span class="fa-stack fa-2x">
-  <i class="fa fa-square-o fa-stack-2x"></i>
-  <i class="fa fa-facebook fa-stack-1x"></i>
-  <span class="screenreader-hidden">Stenosaurus Facebook</span>
-</span></a>
-<a href="http://twitter.com/plover" title="Plover Twitter">
-<span class="fa-stack fa-2x">
-  <i class="fa fa-square-o fa-stack-2x"></i>
-  <i class="fa fa-twitter fa-stack-1x"></i>
-  <span class="screenreader-hidden">Plover Twitter</span>
-</span></a>
-</li>
-<li><p><strong>Latest Blog Post:</strong><br/>
-<a class="linkUnderline" href="http://plover.stenoknight.com/2017/03/stenotoppers-3d-printed-keys-for-your.html">Stenotoppers!</a></p>
-</li>
-</ul>
-<ul>
-<li style="margin:1em 0 1.5em 0;"><span class="button" style="font-size:120%;"><a href="http://stenoknight.com/kws.html"><i class="fa fa-magic"></i> Try a Quick Steno Demo!</a></span></li>
-
-<li style="margin-bottom:1em;">
-<ul class="three-buttons">
-<li><p class="button-icon"><i class="fa fa-download fa-3x"></i></p>
-<p>Available for Win/Mac/Unix</p>
-<p class="endLI"><span class="button"><a href="https://github.com/openstenoproject/plover/releases">Download</a></span></li></p>
-<li><p class="button-icon"><i class="fa fa-users fa-3x"></i></p>
-<p>Want to participate?</p>
-<p class="endLI"><span class="button"><a href="https://groups.google.com/forum/#!forum/ploversteno">Google Group</a></span></li></p>
-<li><p class="button-icon"><i class="fa fa-dollar fa-3x"></i></p>
-<p>Want to help with money or skills?</p>
-<p class="endLI"><span class="button"><a href="http://stenoknight.com/plover/donatepage.html">
-Donate</a></span></p></li>
-</ul>
-</li>
-
-</ul>
-</li>
-
-<li style="margin-right:0;text-align:center;">
-<div class="videoEmbed">
-<iframe src="//www.youtube.com/embed/Wpv-Qb-dB6g" frameborder="0" width="380" height="285" allowfullscreen></iframe>
-</div>
-<p style="margin:1em 0;"><strong>Mirabai&#8217;s Presentation at PyCon 2013</strong> <br/><a href="https://www.youtube.com/watch?v=Wpv-Qb-dB6g" class="linkUnderline">Video original source (w/captions)</a> <br/><a href="transcripts/pycon-2013-video-transcript.html" class="linkUnderline">HTML video transcript</a></p>
-<span class="button"><a href="https://www.youtube.com/user/cnidarae/videos?shelf_id=1&view=0&sort=dd'">More Videos</a></span>
-</li>
-</ul>
-</div>
-</header>
-</div>
-
-<div class="toggles clearfix">
-<button id="show">
-<p>Show/hide all sections</p>
-<i class="fa fa-chevron-circle-down fa-3x"></i>
-</button>
-</div>
-
-<div class="middle-wrap clearfix">
-<h3 id="steno">What is Stenography?</h3>
-<section class="clearfix" id="steno-details">
-<p><img src="images/stenoknight.jpg" alt="Mirabai Knight using a steno machine in different settings"/></p>
-<p class="text-details">Real-time machine stenography is a code translation system that lets users enter words and syllables by pressing multiple keys simultaneously in a chord, which is then instantly translated into English text. This makes steno the fastest and most accurate text entry method currently available. It is also more ergonomic than QWERTY.</p>
-<span class="fa-stack fa-2x">
-  <i class="fa fa-circle fa-stack-2x"></i>
-  <i class="fa fa-fighter-jet fa-stack-1x fa-inverse"></i>
-</span>
-<h4>Speed</h4>
-<ul>
-<li><strong>Handwriting</strong>: 31 wpm</li>
-<li><strong>Average Typist</strong>: 40 wpm</li>
-<li><strong>Top QWERTY Typist</strong>: 120 wpm</li>
-<li><strong>Top Dvorak Typist</strong>: 140 wpm</li>
-<li><strong>Voice Writer</strong>: 180 wpm</li>
-<li><strong>Average Speech</strong>: 200 wpm</li>
-<li><strong>Amateur Stenographer</strong>: 160-200 wpm</li>
-<li><strong>Professional Stenographer</strong>: 225-300 wpm</li>
-<li><strong>Steno World Record</strong>: 360 wpm</li>
-</ul>
-<p class="endSection"><span class="button"><a href="http://stenoknight.com/wiki/Comparison_between_QWERTY_and_Steno">QWERTY vs STENO</a></span></p>
+	</div>
 </section>
-</div>
 
-<div class="middle-wrap clearfix">
-<h3 id="plover">What is the Open Steno Project?</h3>
-<section class="clearfix" id="plover-details">
-<p><img src="images/plover-steno-demo.jpg" alt="An n-key keyboard with Plover on a tablet." /></p>
-<p class="text-details">Steno technology has existed for about a century, and has been compatible with computers for over 30 years, but until now the hardware and software necessary to write at 240 WPM has been restricted to professional stenographers.</p>
-<p class="text-details">The Open Steno Project seeks to bring free software, low-cost hardware, and interactive learning tools to everyone who wants to use steno for their personal or professional pursuits.</p>
-<p class="endSection"><span class="button"><a href="http://stenoknight.com/wiki/FAQ">Learn more about Plover</a></span></p>
-</section>
-</div>
+<div class="content home">
 
-<div class="middle-wrap clearfix">
-<h3 id="users">Who can use steno?</h3>
-<section class="clearfix" id="users-details">
-<div class="colset-03 clearfix">
-<ul>
-<li>
-<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
-  <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-</span>
-<h4>Coders &amp; Developers</h4><p>Developers can help contribute to the Open Steno Project while learning how to write code using steno.</p></li>
-<li>
-<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
-  <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-</span>
-<h4>Writers &amp; Translators</h4><p>Steno is more fluent, efficient, and ergonomic than any other text entry system.</li>
-<li class="last" style="margin-right:0;">
-<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
-  <i class="fa fa-keyboard-o fa-stack-1x fa-inverse"></i>
-</span>
-<h4>Steno Students</h4><p>Plover lowers the financial barriers to entry for people on the road
-to becoming professional stenographers.</p></li>
-</ul>
-</div>
-<p class="endSection" style="clear:both"><span class="button"><a href="http://plover.stenoknight.com/2010/03/how-to-speak-with-your-fingers.html">What Is Steno Good For?</a></span></p>
-</section>
-</div>
+	<section>
+			<div class="text-container" align="center">
+				<h2>What is Open Steno?</h2>
+			</div>
 
-<div class="middle-wrap clearfix">
-<h3 id="start">Get started</h3>
-<section class="clearfix" id="start-details">
-<div class="colset-03 clearfix">
-<ul>
-<li>
-<p class="start-numbers">1</p>
-<p><img src="images/start-01-keyboard-steno.jpg" alt="" /></p>
-<p><a href="http://stenoknight.com/wiki/Getting_Started#Requirements">Use or buy an n-key rollover keyboard and laser-cut keytoppers</a></a></li>
-<li>
-<p class="start-numbers">2</p>
-<p><img src="images/start-02-download.jpg" alt="" /></p>
-<p><a href="http://stenoknight.com/wiki/Getting_Started#Installing_Plover">Download Plover for Win / Mac / Unix</a></p></li>
-<li style="margin-right:0;">
-<p class="start-numbers">3</p>
-<p><img src="images/start-03-hello-world.jpg" alt="" /></p>
-<p><a href="http://stenoknight.com/wiki/Getting_Started#Testing_Installation">Test installation by writing "Hello World"</a></p></li>
-</ul>
+		<div class="container flex">
+
+			<div class="text editable">
+
+				{% include items.html section=site.data.open_steno %}
+
+			</div>
+			<div class="image">
+				<img src="images/dolores.svg" alt="The Open Steno mascot, Dolores." />
+			</div>
+		</div>
+	</section>
+
+	<section>
+			<div class="text-container" align="center">
+				<h2>What is Stenography?</h2>
+			</div>
+
+		<div class="container flex">
+
+			<div class="text editable">
+
+				{% include items.html section=site.data.stenography %}
+
+			</div>
+			<div class="image">
+				{% include youtubePlayer.html id="62l64Acfidc" %}
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="text-container" align="center">
+			<h2>Software</h2>
+		</div>
+		<div class="container flex">
+			<div class="text editable">
+
+        {% include items.html section=site.data.software %}
+
+			</div>
+			<div class="image">
+				<img src="images/plover_screenshot.png" alt="Screenshot of Plover showing the main screen" />
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="text-container" align="center">
+			<h2>Hardware</h2>
+		</div>
+		<div class="container flex">
+			<div class="text editable">
+
+	      {% include items.html section=site.data.hardware %}
+
+			</div>
+			<div class="image">
+				<img src="images/stenotoppers.png" alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="text-container" align="center">
+			<h2>Learn</h2>
+		</div>
+		<div class="container flex">
+			<div class="text editable">
+
+	      {% include items.html section=site.data.learn %}
+
+			</div>
+			<div class="image">
+				<div class="image">
+					{% include youtubePlayer.html id="UtQzTUEuPWo" %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="text-container" align="center">
+			<h2>Start Today</h2>
+		</div>
+		<div class="container flex">
+			<div class="text editable center">
+				<a href="{{ site.baseurl }}/community" title="Community page" class="button">Get Involved in the Community</a>
+				<a href="https://github.com/openstenoproject/plover/wiki/Beginner's-Guide:-Get-Started-with-Plover" title="Plover Wiki guide to getting started with Plover" class="button">Get Started with Plover</a>
+			</div>
+		</div>
+	</section>
 </div>
-<p class="endSection"><span class="button"><a href="http://stenoknight.com/wiki/Getting_Started">Full Get Started Page</a></span></p>
-</section><!--middle-->
-</div>
-
-<div class="middle-wrap clearfix">
-<h3 id="hardware">Hardware</h3>
-<section class="clearfix" id="hardware-details">
-<div class="colset-03 clearfix">
-<p>Want to try out more advanced hardware options?</p>
-<ul>
-<li>
-<p><img src="images/hardware-ergodox.jpg" alt="" /></p>
-<p><a href="https://deskthority.net/wiki/ErgoDox">Ergodox</a></p></li>
-<li>
-<p><img src="images/hardware-stenosaurus.jpg" alt="" /></p>
-<p><a href="http://stenosaurus.com/">Stenosaurus</a></p></li>
-<li style="margin-right:0;">
-<p><img src="images/hardware-stenoboard.jpg" alt="" /></p>
-<p><a href="http://stenoboard.com/">Stenoboard</a></p></li>
-</ul>
-</div>
-<p class="endSection"><span class="button"><a href="http://stenoknight.com/wiki/N-key_rollover#Known_supported_keyboards">Known supported keyboards</a></span></p>
-</section><!--middle-->
-</div>
-
-<div class="middle-wrap clearfix">
-<h3 id="people">People behind the Open Steno Project</h3>
-<section class="clearfix" id="people-details">
-<div class="colset-04 clearfix">
-<ul>
-<li style="text-align:center">
-<h4>Ted<br/>Morin</h4><p>Lead Developer</p>
-<img src="images/ted.png" alt="Photo of Ted" />
-<p class="textUnderlined">
-<a href="http://www.tedmor.in/"><i class="fa fa-desktop fa-lg"></i></a>&nbsp;
-<a href="https://twitter.com/morinted"><i class="fa fa-twitter fa-lg"></i><span class="screenreader-hidden">Ted's Website</span></a>
-</p>
-</li>
-
-<li  style="text-align:center">
-<h4>Hesky<br/>Fisher</h4><p>Developer Emeritus</p>
-<img src="images/photo-145-hesky.png"  alt="Photo of Hesky" />
-<p class="textUnderlined">
-<a href="https://plus.google.com/+HeskyFisher/posts"><i class="fa fa-desktop fa-lg"></i><span class="screenreader-hidden">Website of Hesky</span></a>&nbsp;
-</p>
-</li>
-<li>
-<h4>Joshua<br/>Lifton</h4>
-<p>Inventor of Stenosaurus</p>
-<img src="images/photo-145-joshua.png"  alt="Photo of Joshua" />
-<p class="textUnderlined">
-<a href="http://web.media.mit.edu/~lifton/"><i class="fa fa-desktop fa-lg"></i><span class="screenreader-hidden">Website of Joshua</span></a>&nbsp;
-</p>
-</li>
-</li>
-<li style="margin-right:0;text-align:center;">
-<h4>Emanuele<br/>Caruso</h4>
-<p>Inventor of Stenoboard</p>
-<img src="images/photo-145-emanuele.png"  alt="Photo of Emanuele" />
-<p class="textUnderlined">
-<a href="http://utopen.com/"><i class="fa fa-desktop fa-lg"></i><span class="screenreader-hidden">Website of Emanuele</span></a>&nbsp;
-</p>
-</li>
-<li style="text-align:center">
-<h4>Mirabai<br/>Knight</h4><p>Founder</p>
-<img src="images/photo-145-mirabai.png" alt="Photo of Mirabai" />
-<p class="textUnderlined">
-<a href="http://stenoknight.com"><i class="fa fa-desktop fa-lg"></i></a>&nbsp;
-<a href="https://twitter.com/stenoknight"><i class="fa fa-twitter fa-lg"></i><span class="screenreader-hidden">Website of Mirabai</span></a>
-</p>
-</li>
-
-
-</ul>
-</div>
-</section>
-</div>
-
-<div class="middle-wrap clearfix">
-<h3 id="resources">Resources</h3>
-<section class="clearfix" id="resources-details">
-<div class="colset-03 clearfix">
-<ul>
-<li>
-<h4 id="qwertysteno">QWERTY to Steno</h4>
-<p><img src="images/resources-qwerty-steno.jpg" alt="" /></p>
-<p><span class="button"><a href="http://stenoknight.com/wiki/Quick_References">More references</a></span></p>
-</li>
-<li>
-<h4 id="practice">Practice</h4>
-<p>Improve your steno skills:</p>
-<ul style="margin-bottom:1em;">
-<li><a href="https://sites.google.com/site/ploverdoc/home">Learn Plover! by Zack Brown</a></li>
-<li><a href="http://qwertysteno.com/Home/">QWERTY Steno</a></li>
-<li><a href="http://ploverdojo.appspot.com/">Plover Dojo</a></li>
-<li><a href="https://github.com/caru/StenoTutor">StenoTutor</a></li>
-</ul>
-<p><span class="button"><a href="http://stenoknight.com/wiki/Practice">More practice info</a></span></p>
-</li>
-<li style="margin-right:0;">
-<h4 id="store">Store</h4>
-<p><img src="images/store-items.jpg" alt="" /></p>
-<p><span class="button"><a href="http://plover.deco-craft.com/">Browse the store</a></span></p>
-</li>
-</ul>
-</div>
-</section>
-</div>
-
-<div class="middle-wrap" style="margin-bottom:0;padding-bottom:0;">
-<h3 id="contact">Contact</h3>
-<section class="clearfix" id="contact-details">
-<span class="fa-stack fa-2x">
-  <i class="fa fa-circle fa-stack-2x"></i>
-  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-</span>
-<h4>Do you have any questions or comments?</h4>
-<p>Visit <a href="https://groups.google.com/forum/#!forum/ploversteno">Plover Google Group</a><br/>or<br/>send <a href="mailto:plover@ploversteno.org">an email</a>.</p>
-</section>
-</div>
-
-<footer>
-<p>&copy; 2015 <a href="http://openstenoproject.org/" class="linkUnderline">Open Steno Project</a>. All rights reserved. Designed by <a href="http://svknyc.com" class="linkUnderline">Svetlana Kouznetsova</a>.</p>
-</footer>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-10044279-1");
-pageTracker._setDomainName(".stenoknight.com");
-pageTracker._trackPageview();
-} catch(err) {}
-</script>
-
-</body>
-</html>
+<script src="https://unpkg.com/typer-js"></script><script src="scripts/stenoer.js"></script>

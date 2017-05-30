@@ -1,0 +1,11 @@
+$brand-color: #538078;
+$secondary-brand-color: #3D6961;
+$middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
+
+// Breakpoints
+$tablet: "(min-width: 450px)";
+$mid-point: "(min-width: 800px)";
+$desktop: "(min-width: 768px)";
+
+// Font Variables
+$patua: 'Patua One', sans-serif;

@@ -1,0 +1,17 @@
+- name: Blog
+  link: http://plover.stenoknight.com
+  icon: fa-external-link
+  new_window: true
+  highlight: false
+- name: Community
+  link: /community/
+  new_window: false
+  highlight: false
+- name: About
+  link: /about/
+  new_window: false
+  highlight: false
+- name: Donate
+  link: /donate/
+  new_window: false
+  highlight: true

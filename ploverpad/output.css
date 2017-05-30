@@ -1,0 +1,20 @@
+#outputContainer {
+	/* Positioning */
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	
+	/* Box */
+	width: 600px;
+	height: 227px;
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+#output {
+	/* Box */
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+}

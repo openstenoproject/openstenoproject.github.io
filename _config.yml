@@ -1,0 +1,47 @@
+# ----
+# Site
+
+title: Open Steno Project
+url: http://openstenoproject.org
+google_analytics_key: UA-10044279-1
+
+permalink: pretty
+
+# Values for the jekyll-seo-tag gem
+logo: siteicon.png
+description: Bringing stenography to everyone.
+twitter:
+  username: plover
+author:
+  name: Plover
+  email: plover@ploversteno.org
+  twitter: plover
+social:
+  name: Plover
+  links:
+    - https://www.facebook.com/openstenoproject/
+
+# -----
+# Build
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+gems:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE

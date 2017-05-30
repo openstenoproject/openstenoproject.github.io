@@ -1,0 +1,139 @@
+#stdKeyboard{
+	/* Positioning */
+	position:absolute;
+	left: 0px;
+	top: 228px;
+	
+	/* Box */
+	width: 522px; /* will fit 15 regular-sized keys horizontally */
+	height: 174px; /* will fit 5 regular-sized keys vertically */
+	padding: 10px;
+	border: 1px solid	#000000;
+	margin: 0;
+
+	/* Colors */
+	background-color: #ffffff;
+}
+
+.stdRow {
+	/* Box */
+	width: 100%;
+	height: 20%; /* will fit 5 rows in the keyboard */
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+.stdKey {
+	/* Positioning */
+	float: left;
+
+	/* Box */
+	width: 6%; /* 100% / 15 (keys) - (2 (left and right) * 0.333% (margin)) */
+	height: 90%; /* 100% - (15 (ratio across width / row height) * (2 (left and right) * 0.333% (margin))) */
+	padding: 0;
+	border: 0;
+	margin: 0.333%; /* width and height depend on this value. change accordingly */
+
+	/* Colors */
+	color: #ffffff;
+	background-color: #000000;
+
+	/* Text */
+	font-family: sans-serif;
+	font-size: 10.5px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) / 3 */
+	font-weight: bold;
+	line-height: 31.5px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) */
+	text-align: center;
+
+	/* Styling */
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	border-radius: 10%;
+}
+
+#stdKeyBackspace{
+	/* Box */
+	width: 12.666%;
+}
+
+#stdKeyTab{
+	/* Box */
+	width: 9.333%;
+}
+
+#stdKeyBackslash{
+	/* Box */
+	width: 9.333%;
+}
+
+#stdKeyCapsLock{
+	/* Box */
+	width: 11%;
+}
+
+#stdKeyEnter{
+	/* Box */
+	width: 14.333%;
+}
+
+#stdKeyLeftShift{
+	/* Box */
+	width: 14.333%;
+}
+
+#stdKeyRightShift{
+	/* Box */
+	width: 17.666%;
+}
+
+#stdKeyLeftControl{
+	/* Box */
+	width: 9.333%;
+}
+
+#stdKeyLeftAlt{
+	/* Box */
+	width: 9.333%;
+}
+
+#stdKeySpace{
+	/* Box */
+	width: 39.333%;
+}
+
+#stdKeyRightAlt{
+	/* Box */
+	width: 9.333%;
+}
+
+#stdKeyRightControl{
+	/* Box */
+	width: 9.333%;
+}
+
+.upper {
+	/* Positionning */
+	float: left;
+	
+	/* Box */
+	height: 50%;
+	width: 100%;
+
+	/* Text */
+	line-height: 21px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) / 3 * 2 */
+	text-align: center;
+}
+
+.lower {
+	/* Positioning */
+	float: left;
+	
+	/* Box */
+	height: 50%;
+	width: 100%;
+	
+	/* Text */
+	line-height: 10.5px; /* 250px (stdKeyboard height) * 20% (stdRow height) * 90% (stdKey height) / 3 */
+	text-align: center;
+}

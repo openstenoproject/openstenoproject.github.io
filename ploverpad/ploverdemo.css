@@ -1,0 +1,27 @@
+@import url(qwertyKeyboard.css);
+@import url(stenoKeyboard.css);
+@import url(verticalNotes.css);
+@import url(output.css);
+
+#container {
+	/* Positioning */
+	display: block;
+
+	/* Box */
+	width: 90%;
+	height: 90%;
+	padding: 0;
+	border: 1px solid #000;
+	margin: 0;
+}
+
+h1 {
+	/* Box */
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
