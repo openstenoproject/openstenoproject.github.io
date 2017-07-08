@@ -17,10 +17,10 @@ We also accept donations, which are used to help fund new projects and pay maint
 | Amount |Source / Expense |
 |-------:|:----------------|
 | $2,503 | Donations       |
-| $2,201 | [Plover Store](http://plover.deco-craft.com/) |
+| $2,220 | [Plover Store](http://plover.deco-craft.com/) |
 | -$3,000| Funding [Steno Arcade](http://store.steampowered.com/app/449000/Steno_Arcade/) |
 |        |                 |
-| $1,704 | Remaining Funds |
+| $1,723 | Remaining Funds |
 
 Donations of money can be sent through PayPal: 
 
