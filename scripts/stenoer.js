@@ -214,6 +214,9 @@ function stenoAnimation() {
   }
 
   function longAnimation() {
+    if (typeof ga !== 'undefined') {
+      ga('send', 'event', 'Intro Animation', 'replay start')
+    }
     var animatedHeader = document.getElementById('stenoer')
     if (animatedHeader.className.indexOf('done') === -1) {
       return // Prevent double clicks.
@@ -238,6 +241,9 @@ function stenoAnimation() {
         }
       }
       typer.end(addDoneClass)
+      if (typeof ga !== 'undefined') {
+        ga('send', 'event', 'Intro Animation', 'replay finish')
+      }
     }, 250)
   }
 
