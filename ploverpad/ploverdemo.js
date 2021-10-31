@@ -176,11 +176,6 @@ function colorCode(keys) {
 		$('#stenoKey-L').css('background-color', '#80ffff');
 	}
 
-	// Final V
-	if ('-F' in stenoKeys) {
-		$('#stenoKey-F').css('background-color', '#808080');
-	}
-
 	// Final Z
 	if ('-Z' in stenoKeys) {
 		$('#stenoKey-Z').css('background-color', '#ff0000');
