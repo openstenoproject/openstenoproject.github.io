@@ -21,6 +21,10 @@ social:
   links:
     - https://www.facebook.com/openstenoproject/
 
+collections:
+  events:
+    sort-by: date
+
 # -----
 # Build
 
