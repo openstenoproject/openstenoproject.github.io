@@ -11,6 +11,10 @@
   link: /about/
   new_window: false
   highlight: false
+- name: Events
+  link: /events/
+  new_window: false
+  highlight: false
 - name: Donate
   link: /donate/
   new_window: false
