@@ -1,6 +1,6 @@
 ---
 title: Plover Meetup
-date: 2022-01-19 16:00:00 EST
+date: 2022-01-22 16:00:00 EST
 location: <https://www.youtube.com/watch?v=F0nKjhlYofU>
 ---
 
