@@ -29,7 +29,7 @@ Mirabai is a leader in our community and we have many members. Currently, the ma
 
 The Open Steno Project was started in 2007 and has been constantly growing.
 
-There is a [detailed timeline of the Open Steno Project](https://github.com/openstenoproject/plover/wiki/Open-Steno-Project-Timeline) on the Plover Wiki.
+There is a [detailed timeline of the Open Steno Project](https://plover.wiki/index.php/Open_Steno_Project_Timeline) on the Plover Wiki.
 
 ### Watch a Talk on Open Steno
 
