@@ -4,7 +4,7 @@ description: Get in touch with the Open Steno community
 layout: post
 ---
 
-The Open Steno Project wouldn't be where it is today without its fantastic community.
+Open Steno wouldn't be where it is today without its fantastic community.
 
 We are all around the world, all ages, hobbyists, professionals, developers, novelists, and so much more. Whether you are seeking a fun hobby, looking to boost your productivity, or want to start a career, stenography is a great choice.
 

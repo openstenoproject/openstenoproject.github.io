@@ -1,6 +1,6 @@
 ---
 title: About
-description: Learn about the history, mission, and future of the Open Steno Project
+description: Learn about the history, mission, and future of Open Steno
 layout: post
 ---
 

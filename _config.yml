@@ -1,8 +1,8 @@
 # ----
 # Site
 
-title: Open Steno Project
-url: http://openstenoproject.org
+title: Open Steno
+url: https://opensteno.org
 google_analytics_key: UA-102613911-1
 
 permalink: pretty
@@ -10,16 +10,10 @@ permalink: pretty
 # Values for the jekyll-seo-tag gem
 logo: siteicon.png
 description: Bringing stenography to everyone.
-twitter:
-  username: plover
 author:
   name: Plover
   email: plover@ploversteno.org
   twitter: plover
-social:
-  name: Plover
-  links:
-    - https://www.facebook.com/openstenoproject/
 
 collections:
   events:

@@ -1,10 +1,10 @@
 ---
 title: Donate
-description: Contribute to the Open Steno Project
+description: Contribute to Open Steno
 layout: post
 ---
 
-The Open Steno Project is run by volunteers.
+Open Steno is run by volunteers.
 
 The **best way to contribute is by being a member of the community**. Help by giving us feedback as you learn, and using your unique talents to grow Open Steno.
 
